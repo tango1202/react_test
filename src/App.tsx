@@ -5,7 +5,9 @@ import MyDiv from './MyDiv'; // 불러오기 합니다.
 import MyVal from './MyVal';
 import MyUserList from './MyUserList';
 import MyButton from './MyButton';
-import MyState1 from './MyState';
+import MyState from './MyState';
+import MyProps from './MyProps';
+import MyCounter from './MyCounter';
 
 function App() {
   return (
@@ -27,7 +29,9 @@ function App() {
         <MyVal />
         <MyUserList />
         <MyButton />
-        <MyState1 />
+        <MyState />
+        <MyProps />
+        <MyCounter />
       </header>
     </div>
   );
