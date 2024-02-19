@@ -6,15 +6,17 @@ import MyVal from './MyVal';
 import MyUserList from './MyUserList';
 import MyButton from './MyButton';
 import MyState from './MyState';
+import MyArrayState from './MyArrayState';
 import MyProps from './MyProps';
 import MyCounter from './MyCounter';
+import MySnapshot from './MySnapshot';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>안녕하세요.반가워욘</p>
+        <p>안녕하세요.반가워요</p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -30,8 +32,10 @@ function App() {
         <MyUserList />
         <MyButton />
         <MyState />
+        <MyArrayState />
         <MyProps />
         <MyCounter />
+        <MySnapshot />
       </header>
     </div>
   );

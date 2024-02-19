@@ -2,6 +2,7 @@ import { useState } from 'react'; // #1
 
 const MyState = () => {
   const [stateCount, setStateCount] = useState(0); // #2
+  // const [stateCount, setStateCount] = useState<number>(0); // useState<타입>으로 타입을 명시할 수 있습니다.
   let count = 0;
   console.log('MyState 이 호출되었습니다.');
   function onClick() {
