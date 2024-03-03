@@ -1,6 +1,6 @@
 import { useRef, useCallback, useReducer } from 'react';
 
-// #1. reducer에서 사용할 데이터 정보입니다.
+// #1. datasReducer에서 사용할 데이터 정보입니다.
 interface IData {
   name: string;
   age: number;
@@ -9,12 +9,12 @@ interface IState {
   datas: IData[];
 }
 
-// #2. reducer의 초기값입니다. 빈 배열입니다.
+// #2. datasReducer의 초기값입니다. 빈 배열입니다.
 const initialState: IState = {
   datas: [],
 };
 
-// #3. reducer에서 사용할 액션 정보입니다. 액션 타입에 따라 동작을 구분합니다.
+// #3. datasReducer에서 사용할 액션 정보입니다. 액션 타입에 따라 동작을 구분합니다.
 enum ActionType {
   Create,
   Update,
@@ -27,7 +27,7 @@ interface IAction {
 
 // #4. ActionType에 따라 state의 값을 수정합니다. 이때, State의 경우와 마찬가지로 복제본을 리턴해야 다시 렌더링 됩니다.
 // State를 수정하는 기능들이 한곳에 응집되어 관리가 용이해 집니다.
-const reducer = (state: IState, action: IAction): IState => {
+const datasReducer = (state: IState, action: IAction): IState => {
   switch (action.type) {
     case ActionType.Create: // datas 뒤에 새로운 action.data를 추가하여 리턴합니다.
       return {
@@ -49,12 +49,12 @@ const reducer = (state: IState, action: IAction): IState => {
   }
 };
 
-// 5. 사용자 정보를 입력받는 Toolbar와 해당 내용을 출력하는 List를 표시합니다.
+// #5. 사용자 정보를 입력받는 Toolbar와 해당 내용을 출력하는 List를 표시합니다.
 const MyUseReducer = () => {
-  const [state, dispatch] = useReducer(reducer, initialState); // #5-1. reducer를 생성합니다.
+  const [state, dispatch] = useReducer(datasReducer, initialState); // #5-1. reducer를 생성합니다.
 
   const onAction = (action: IAction) => {
-    dispatch(action); // #5-2. reducer를 실행합니다.
+    dispatch(action); // #5-2. datasReducer를 실행합니다.
   };
   return (
     <div>
@@ -68,7 +68,7 @@ interface IMyToolbarProps {
   datas: IData[];
   onAction(action: IAction): void;
 }
-// 6. UI를 이용하여 정보를 읽고 Action개체를 만들어 상위 개체에 전달합니다.
+// #6. UI를 이용하여 정보를 읽고 Action개체를 만들어 상위 개체에 전달합니다.
 const MyToolbar = (props: IMyToolbarProps) => {
   const nameRef = useRef<HTMLInputElement>(null);
   const ageRef = useRef<HTMLInputElement>(null);

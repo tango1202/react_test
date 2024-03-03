@@ -1,0 +1,8 @@
+{
+  "idc_File": "파일",
+  "idc_Edit": "편집",
+  "file": { 
+    "idc_Open": "열기",
+    "idc_Save": "저장"
+  }
+}

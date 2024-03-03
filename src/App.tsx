@@ -21,8 +21,18 @@ import MyUseRefCustom from './MyUseRefCustom';
 import MyUseContext from './MyUseContext';
 import MyUseReducer from './MyUseReducer';
 import MyUseCounter from './MyUseCounter';
+// import MyComponent1 from 'myModule/comonent/lib/MyComponent1';
+// import MyComponent2 from 'myModule/comonent/lib/MyComponent2';
+// import { IMyData } from 'myModule/comonent/lib/MyData';
+import { MyComponent1, MyComponent2, IMyData } from 'myModule';
+import MyStyle from './MyStyle';
+import MyString from './MyString';
+import MyRedux from './MyRedux';
+import MyCombineReducer from './MyCombineReducer';
+import MySlice from './MySlice';
 
 function App() {
+  const data: IMyData = { name: '홍길동', addr: '한국' };
   return (
     <div className="App">
       <header className="App-header">
@@ -53,6 +63,13 @@ function App() {
         <MyUseContext />
         <MyUseReducer />
         <MyUseCounter />
+        <MyComponent1 />
+        <MyComponent2 data={data} />
+        <MyStyle />
+        <MyString />
+        <MyRedux/>
+        <MyCombineReducer/>
+        <MySlice/>
       </header>
     </div>
   );

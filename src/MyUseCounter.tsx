@@ -52,7 +52,7 @@ const MyUseCounter = () => {
 
 // #1. 커스텀 Hook입니다. 값을 수정할 수 있는 inc(), dec()를 리턴합니다.
 const useCounter = (init:number) => {
-  const [value, setValue] = useState(init);
+  const [value, setValue] = useState(init); // #2
   const inc = () => {
     setValue(value + 1);
   };  
@@ -63,18 +63,18 @@ const useCounter = (init:number) => {
 };
 
 const MyLeftRightCounter = () => {
-  const {value, inc, dec} = useCounter(0); // #2
+  const {value, inc, dec} = useCounter(0); // #3
 
   return (
     <>
-      <button onClick={dec}>{'-'}</button> {/* #3. inc/dec를 바로 이벤트 핸들러로 등록하였습니다. */}
+      <button onClick={dec}>{'-'}</button> {/* #4. inc/dec를 바로 이벤트 핸들러로 등록하였습니다. */}
       <span>{value}</span> 
-      <button onClick={inc}>{'+'}</button> {/* #3. inc/dec를 바로 이벤트 핸들러로 등록하였습니다. */} 
+      <button onClick={inc}>{'+'}</button> {/* #4. inc/dec를 바로 이벤트 핸들러로 등록하였습니다. */} 
     </>
   );
 };
 const MyTopDownCounter = () => {
-  const {value, inc, dec} = useCounter(0); // #2
+  const {value, inc, dec} = useCounter(0); // #3
 
   return (
     <>
