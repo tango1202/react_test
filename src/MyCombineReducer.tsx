@@ -143,8 +143,7 @@ const MyList = () => {
             }
           }
         >
-          {' '}
-          {name}{' '}
+          {name}
         </li>
       ))}
     </ol>
