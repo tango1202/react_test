@@ -30,9 +30,12 @@ import MyString from './MyString';
 import MyRedux from './MyRedux';
 import MyCombineReducer from './MyCombineReducer';
 import MySlice from './MySlice';
+import MyImmer from './MyImmer';
+import MyReduxActions from './MyReduxActions';
 
 function App() {
   const data: IMyData = { name: '홍길동', addr: '한국' };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -70,6 +73,8 @@ function App() {
         <MyRedux/>
         <MyCombineReducer/>
         <MySlice/>
+        <MyImmer/>
+        <MyReduxActions/>
       </header>
     </div>
   );

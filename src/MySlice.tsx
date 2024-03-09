@@ -22,7 +22,7 @@ const namesSlice = createSlice({
   reducers: {
     add: (state: INamesState, action: PayloadAction<string>) => {
       // #3. 인자로 전달된 state를 직접 수정합니다.
-      state.names = [...state.names, action.payload];
+      state.names.push(action.payload);
     },
     save: (state: INamesState, action: PayloadAction<string>) => {
       console.log('이름들을 저장합니다.');
@@ -95,7 +95,7 @@ const MyToolbar = () => {
   };
   return (
     <div>
-      <span>{'이름'}</span>
+      <span>{'(Slice 테스트) 이름'}</span>
       <input ref={nameRef} />
       <button onClick={onAdd}>{'추가'}</button>
       <button onClick={onSave}>{'저장'}</button>
