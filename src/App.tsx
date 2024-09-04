@@ -32,6 +32,7 @@ import MyCombineReducer from './MyCombineReducer';
 import MySlice from './MySlice';
 import MyImmer from './MyImmer';
 import MyReduxActions from './MyReduxActions';
+import MyRouter from 'MyRouter';
 
 function App() {
   const data: IMyData = { name: '홍길동', addr: '한국' };
@@ -75,9 +76,11 @@ function App() {
         <MySlice/>
         <MyImmer/>
         <MyReduxActions/>
+        <MyRouter/>
       </header>
     </div>
   );
 }
+
 
 export default App;
