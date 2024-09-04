@@ -50,13 +50,14 @@ const MyRouter = () => {
         <Link to ='/about'><button>{'About'}</button></Link>
       </div>
       <Routes>
+        {/* #1. 정의하지 않으면, No routes matched location 경고 발생 */}
         {/* http://localhost:3000 */}
         <Route path='/' element={<Navigate replace to={"/"} />}/> 
 
         {/* http://localhost:3000/List */}
         <Route path='/list' element={<List />}/>
 
-        {/* #1 */}
+        {/* #2 */}
         {/* http://localhost:3000/Desc/id-01 */}
         {/* http://localhost:3000/Desc/id-02 */}
         <Route path='/desc/:id' element={<Desc />}/>
