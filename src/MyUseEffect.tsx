@@ -33,7 +33,8 @@ const MyComponent = (props: IMyComponentProps) => {
   useEffect(() => console.log(`propVal = ${propVal}, state = ${state}, [state]. State가 바뀌면 실행`),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [state]);
-  useEffect(() => console.log(`propVal = ${propVal}, state = ${state}, [propVal, state]. Props와 State가 바뀌면 실행.`), [propVal, state]);
+  useEffect(() => console.log(`propVal = ${propVal}, state = ${state}, [propVal, state]. Props와 State가 바뀌면 실행.`), 
+    [propVal, state]);
 
   const onClick = () => {
     setState(state + 1); // #2. state를 변경합니다. MyComponent 가 다시 렌더링됩니다.

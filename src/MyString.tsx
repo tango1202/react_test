@@ -4,11 +4,11 @@ import i18n from './locales/i18n'; // #2. 만약 i18n을 사용하지 않는다�
 
 const MyString = () => {
   const { t } = useTranslation(); // #3
-  const [isKr, setIsKr] = useState(true); // #4
+  const [isKo, setIsKo] = useState(true); // #4
 
   const onToggle = () => {
-    i18n.changeLanguage(isKr ? 'en' : 'kr'); // #4. 한국어 이면 영어로, 영어이면 한국어로 바꿉니다.
-    setIsKr(!isKr);
+    i18n.changeLanguage(isKo ? 'en' : 'ko'); // #4. 한국어 이면 영어로, 영어이면 한국어로 바꿉니다.
+    setIsKo(!isKo);
   };
   return (
     <>

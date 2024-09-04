@@ -16,7 +16,9 @@ const MyArrayState = () => {
   const onArrayClick = () => {
     const clone = [...arr];
     clone[0].x = 100; // #3. 복제본을 수정합니다.
-    console.log(arr[0].x === clone[0].x); // #3. 배열의 각 요소는 앝은 복사됩니다.
+    console.log(arr !== clone); // #3-1. 배열은 복제했으므로 다른 개체입니다.
+    console.log(arr[0].x === clone[0].x); // #3-2. 배열의 각 요소는 앝은 복사됩니다.
+    
     setArr(clone); // #4. 렌더링을 다시 합니다.
   };
   return (

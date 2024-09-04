@@ -10,7 +10,7 @@ const MyUseEffectUnmount = () => {
   return (
     <>
       <button onClick={onToggleClick}>{'컴포넌트 추가/삭제 토글'}</button>
-      {toggle ? <MyComponent /> : null} {/* #2 */}
+      {toggle && <MyComponent />} {/* #2 */}
     </>
   );
 };
