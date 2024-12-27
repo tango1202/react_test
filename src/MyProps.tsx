@@ -15,7 +15,7 @@ const User = (props: IProps) => {
   );
 };
 
-// 함수 인자 선언시 바로 구조 분해할 수 있습니다.
+// #3-1. 함수 인자 선언시 바로 구조 분해할 수 있습니다.
 // const User = ({id, name}: IProps) => {
 //   return (
 //     <div>
